@@ -21,6 +21,7 @@ class HTMLFetcher:
         self.driver.set_page_load_timeout(10)
 
     def get(self, url: str) -> str:
+        self.driver.delete_all_cookies()
         self.driver.get(url)
         return self.driver.page_source
 
