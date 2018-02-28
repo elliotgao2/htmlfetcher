@@ -1,4 +1,5 @@
 import os
+import time
 
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -20,9 +21,10 @@ class HTMLFetcher:
                                         firefox_profile=firefox_profile)
         self.driver.set_page_load_timeout(10)
 
-    def get(self, url: str) -> str:
+    def get(self, url: str, wait: int = 0) -> str:
         self.driver.delete_all_cookies()
         self.driver.get(url)
+        time.sleep(wait)
         return self.driver.page_source
 
     def close(self) -> None:

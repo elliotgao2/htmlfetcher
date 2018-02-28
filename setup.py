@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="htmlfetcher",
-    version="0.0.1",
+    version="0.0.2",
     description="No pain HTML fetching library.",
     author="Jiuli Gao",
     author_email="gaojiuli@gmail.com",
