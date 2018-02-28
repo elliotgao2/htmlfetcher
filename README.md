@@ -1,6 +1,7 @@
 # HTML Parsing
 
 No pain HTML fetching library. A light wrapper of selenium
+For page with a lot of ajax.
 
 
 ## Installation
