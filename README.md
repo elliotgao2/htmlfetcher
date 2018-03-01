@@ -1,6 +1,9 @@
 # HTML Parsing
 
-No pain HTML fetching library. A light wrapper of selenium
+No pain HTML fetching library. 
+
+A light wrapper of selenium.
+
 For page with a lot of ajax.
 
 
@@ -9,6 +12,8 @@ For page with a lot of ajax.
 ```python
 pip install htmlfetcher
 ```
+
+download browser: [https://github.com/mozilla/geckodriver/releases](https://github.com/mozilla/geckodriver/releases)
 
 ## Usage
 
