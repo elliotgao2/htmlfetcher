@@ -6,7 +6,7 @@ from selenium.webdriver.firefox.options import Options
 
 
 class HTMLFetcher:
-    def __init__(self) -> None:
+    def __init__(self, browser: str) -> None:
         firefox_options = Options()
         firefox_options.add_argument('-headless')
 
@@ -15,7 +15,7 @@ class HTMLFetcher:
         firefox_profile.set_preference('permissions.default.image', 2)
         firefox_profile.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
 
-        self.driver = webdriver.Firefox(executable_path=os.path.join(os.path.dirname(__file__), 'geckodriver'),
+        self.driver = webdriver.Firefox(executable_path=browser,
                                         firefox_options=firefox_options,
                                         log_path='/tmp/geckodriver.log',
                                         firefox_profile=firefox_profile)

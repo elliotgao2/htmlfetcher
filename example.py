@@ -1,13 +1,7 @@
-from pprint import pprint
-
 from htmlfetcher import HTMLFetcher
-from htmlparsing import *
 
-fetcher = HTMLFetcher()
-text = fetcher.get('http://www.bpzufang.com/home', wait=5)
+fetcher = HTMLFetcher(browser='/home/bug/桌面/geckodriver')
+text = fetcher.get('http://zhaopin.baidu.com/quanzhi?tid=4139&ie=utf8&oe=utf8&query=python&city_sug=%E6%88%90%E9%83%BD')
 fetcher.close()
-results = HTMLParsing(text).list('.stream-item', {'title': Text('.context-title'),
-                                                  'user': Text('.author span'),
-                                                  'time': Text('.time')})
 
-pprint(results)
+print(text)
