@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="htmlfetcher",
-    version="0.0.4",
+    version="0.0.6",
     description="No pain HTML fetching library.",
     author="Jiuli Gao",
     author_email="gaojiuli@gmail.com",
@@ -17,7 +17,6 @@ setup(
     install_requires=[
         'selenium'
     ],
-    packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
 )
